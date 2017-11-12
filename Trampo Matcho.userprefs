@@ -1,10 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TrampoBounce.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/exitApp.cs">
     <Files>
+      <File FileName="Assets/Scripts/TrampoBounce.cs" Line="31" Column="6" />
       <File FileName="Assets/Scripts/TrampoScroll.cs" Line="16" Column="98" />
-      <File FileName="Assets/Scripts/TrampoCamera.cs" Line="10" Column="17" />
-      <File FileName="Assets/Scripts/TrampoBounce.cs" Line="30" Column="51" />
+      <File FileName="Assets/Scripts/TrampoCamera.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/exitApp.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
