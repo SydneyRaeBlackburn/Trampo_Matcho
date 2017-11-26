@@ -17,6 +17,8 @@ public class imageSwitch : MonoBehaviour {
 	private bool nextLevel;
 	private bool lose;
 	private bool win;
+	public AudioClip deathEffect;
+	public AudioClip winEffect;
 
 	void Start() {
 		images.sprite = sprites [8];
@@ -83,6 +85,7 @@ public class imageSwitch : MonoBehaviour {
 		}
 
 		if (lose) {
+			SoundManager.instance.PlaySingle (deathEffect);
 			GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().loseText.text = "You lose";
 			GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().restartText.text = "Press 'R' for Restart";
 			StartCoroutine (EndGame ());
@@ -90,6 +93,7 @@ public class imageSwitch : MonoBehaviour {
 		}
 
 		if (win) {
+			SoundManager.instance.PlaySingle (winEffect);
 			GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().winText.text = "You win!";
 			GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().restartText.text = "Press 'R' for Restart";
 			StartCoroutine (EndGame ());

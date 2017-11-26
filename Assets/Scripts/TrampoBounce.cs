@@ -11,6 +11,7 @@ public class TrampoBounce : MonoBehaviour {
 	public Text restartText;
 	public int level = 0;
 	public bool entered = false;
+	public AudioClip jumpEffect;
 
 	void Start () {
 		levelText.text = "Level: " + level;
@@ -21,7 +22,8 @@ public class TrampoBounce : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision){
 		if (collision.gameObject.tag == "Player") {
-				entered = true;
+			SoundManager.instance.PlaySingle (jumpEffect);
+			entered = true;
 		}
 	}
 }
