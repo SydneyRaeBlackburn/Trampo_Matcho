@@ -40,7 +40,7 @@ public class imageSwitch : MonoBehaviour {
 					GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().level;
 				SetSprite ();
 				GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().entered = false;
-				numberOfSwitches = 1;//GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().level;
+				numberOfSwitches = GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().level;
 				nextLevel = false;
 			}
 		}
