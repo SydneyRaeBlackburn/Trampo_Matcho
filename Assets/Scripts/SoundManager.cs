@@ -4,6 +4,7 @@ using System.Collections;
 public class SoundManager : MonoBehaviour 
 {
 	// Code from unity tutorial about creating an audio and sound manager
+	// implements singleton
 
 	public AudioSource efxSource;                   //Drag a reference to the audio source which will play the sound effects.
 	public AudioSource musicSource;                 //Drag a reference to the audio source which will play the music.

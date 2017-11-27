@@ -20,6 +20,7 @@ public class trampoMatcho : MonoBehaviour {
 	private int spriteNumberOld;
 	private int spriteNumberNew;
 	private int numberOfSwitches;
+	private int level = 0;
 
 	public enum Direction { UP, LEFT, RIGHT, DOWN } // To help with input
 
@@ -33,16 +34,19 @@ public class trampoMatcho : MonoBehaviour {
 		levelText.text = "Level: ";
 		winText.text = "";
 		loseText.text = "";
-		switchesLeftText.text = "Switches Left: " + GameManager.instance.level;
+		switchesLeftText.text = "Switches Left: " + level;
 		StartCoroutine(UpdateSwitches());
 	}
 
 	void Update () {
 		// When player bounces off the trampoline and has successfully reached the next level
 		if ((nextLevel == true) && (GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().entered == true)) {
-			GameManager.instance.level++;
-			numberOfSwitches = GameManager.instance.level;
-			levelText.text = "Level: " + GameManager.instance.level;
+			//GameManager.instance.level++;
+			level++;
+			//numberOfSwitches = GameManager.instance.level;
+			numberOfSwitches = level;
+			//levelText.text = "Level: " + GameManager.instance.level;
+			levelText.text = "Level: " + level;
 			switchesLeftText.text = "Switches Left: " + numberOfSwitches;
 			SetSprite ();
 			GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().entered = false;
@@ -79,7 +83,7 @@ public class trampoMatcho : MonoBehaviour {
 				yield return StartCoroutine (ImageSwitch (Direction.RIGHT)); 
 			}
 
-			if (GameManager.instance.level == 30 && numberOfSwitches == 0) {
+			if (level == 30 && numberOfSwitches == 0) {
 				win = true;
 				break;
 			} else if (GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().entered == true && numberOfSwitches != 0) {
