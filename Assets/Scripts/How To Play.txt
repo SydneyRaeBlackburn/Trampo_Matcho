@@ -1,0 +1,5 @@
+• When the player bounces up from the trampoline, press the arrow keys that match the images at the top of the screen.
+
+• If you do not match all the arrows by the time the player touches the trampoline again, you lose.
+
+• If you reach level 30 and match all the arrows by the time the player touches the trampoline again, you win.

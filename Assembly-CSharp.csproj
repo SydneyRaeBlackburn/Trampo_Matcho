@@ -61,6 +61,8 @@
      <Compile Include="Assets\Scripts\TrampoBounce.cs" />
      <Compile Include="Assets\Scripts\TrampoCamera.cs" />
      <Compile Include="Assets\Scripts\trampoMatcho.cs" />
+     <None Include="Assets\Scripts\How To Play.txt" />
+     <None Include="Assets\Scripts\2D Game Proposal.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
