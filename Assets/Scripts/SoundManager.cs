@@ -5,6 +5,7 @@ public class SoundManager : MonoBehaviour
 {
 	// Code from unity tutorial about creating an audio and sound manager
 	// implements singleton
+	// sound effects from Raiden's 2D snake tutorial
 
 	public AudioSource efxSource;                   //Drag a reference to the audio source which will play the sound effects.
 	public AudioSource musicSource;                 //Drag a reference to the audio source which will play the music.
