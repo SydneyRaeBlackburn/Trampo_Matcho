@@ -3,6 +3,8 @@ using System.Collections;
 
 public class SoundManager : MonoBehaviour 
 {
+	// Code from unity tutorial about creating an audio and sound manager
+
 	public AudioSource efxSource;                   //Drag a reference to the audio source which will play the sound effects.
 	public AudioSource musicSource;                 //Drag a reference to the audio source which will play the music.
 	public static SoundManager instance = null;     //Allows other scripts to call functions from SoundManager.             

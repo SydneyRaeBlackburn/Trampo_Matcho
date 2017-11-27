@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TrampoBounce : MonoBehaviour {
+
+	// Detects when the player as hit the trampoline
 	
 	public bool entered = false;
 	public AudioClip jumpEffect;

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TrampoCamera : MonoBehaviour {
 
+	// Follows the player as it goes up and down
+
 	public GameObject player;
 	private Vector3 offset;
 

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class trampoMatcho : MonoBehaviour {
 
-	public Image images;
+	public Image images;							
 	public Sprite[] sprites = new Sprite[5];
 	public AudioClip deathEffect;
 	public AudioClip winEffect;
@@ -21,13 +21,13 @@ public class trampoMatcho : MonoBehaviour {
 	private int spriteNumberNew;
 	private int numberOfSwitches;
 
-	public enum Direction { UP, LEFT, RIGHT, DOWN }
+	public enum Direction { UP, LEFT, RIGHT, DOWN } // To help with input
 
 	void Start () {
 		lose = false;
 		win = false;
 		nextLevel = true;
-		images.sprite = sprites [4];
+		images.sprite = sprites [4]; // blank image
 		numberOfSwitches = 0;
 		RandomSpriteNumber ();
 		levelText.text = "Level: ";
@@ -38,6 +38,7 @@ public class trampoMatcho : MonoBehaviour {
 	}
 
 	void Update () {
+		// When player bounces off the trampoline and has successfully reached the next level
 		if ((nextLevel == true) && (GameObject.Find ("Trampoline").GetComponent<TrampoBounce> ().entered == true)) {
 			GameManager.instance.level++;
 			numberOfSwitches = GameManager.instance.level;
@@ -49,6 +50,7 @@ public class trampoMatcho : MonoBehaviour {
 		}
 	}
 
+	// Modified code taken from Raiden's 2D snake tutorial PDF
 	IEnumerator UpdateSwitches () {
 		while (true) {
 			// handle multi key presses
@@ -97,7 +99,9 @@ public class trampoMatcho : MonoBehaviour {
 		}
 	}
 
+	// Modified code taken from Raiden's 2D snake tutorial PDF
 	public IEnumerator ImageSwitch(Direction arrowPressed) {
+		// determines if the correct arrow key was hit
 		switch (arrowPressed) {
 		case Direction.DOWN:
 			if ((spriteNumberOld == 0) && (numberOfSwitches != 0))
@@ -122,7 +126,7 @@ public class trampoMatcho : MonoBehaviour {
 
 	private void RandomSpriteNumber() {
 		spriteNumberNew = UnityEngine.Random.Range (0,4);
-		if (spriteNumberNew == spriteNumberOld) {
+		if (spriteNumberNew == spriteNumberOld) { // So same image doesn't appear twice in a row
 			RandomSpriteNumber ();
 		}
 	}
@@ -136,10 +140,10 @@ public class trampoMatcho : MonoBehaviour {
 	private void SwitchHandler() {
 		numberOfSwitches--;
 		switchesLeftText.text = "Switches Left: " + numberOfSwitches;
-		if (numberOfSwitches <= 0) {
-			images.sprite = sprites [4];
+		if (numberOfSwitches <= 0) { // All the arrows were hit
+			images.sprite = sprites [4]; // Set image as blank
 			nextLevel = true;
-		} else
+		} else // There are more arrows to hit
 			SetSprite ();
 	}
 }

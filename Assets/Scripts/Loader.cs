@@ -4,6 +4,8 @@ using System.Collections;
 
 public class Loader : MonoBehaviour 
 {
+	// Code taken from a unity tutorial about creating a game manager
+
 	public GameObject gameManager;          //GameManager prefab to instantiate.
 	public GameObject soundManager;         //SoundManager prefab to instantiate.
 

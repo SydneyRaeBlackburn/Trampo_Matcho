@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class inputHandler {
-	
+
+	// Modified code taken from Raiden's 2D snake tutorial
+
 	// handle multi Input
 	public static bool GetStandardMoveMultiInputKeys() {
 		// check UpArrow
