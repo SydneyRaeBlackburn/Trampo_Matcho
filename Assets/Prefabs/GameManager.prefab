@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1563454021408342}
+  m_IsPrefabParent: 1
+--- !u!1 &1563454021408342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4165939677213770}
+  - component: {fileID: 114741480780872672}
+  - component: {fileID: 114496410622980076}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4165939677213770
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563454021408342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6043555, y: 2.3758314, z: -0.109105706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114496410622980076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563454021408342}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3851ddd1136ed4bc99db0d2af2c54f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images: {fileID: 0}
+  sprites:
+  - {fileID: 21300000, guid: 0612afb0f83ab43daa2d680249d36daf, type: 3}
+  - {fileID: 21300000, guid: 12f6c7b9481204ba29fa02a3799ad6e7, type: 3}
+  - {fileID: 21300000, guid: f78a2b7a9500b4d0c81f5cfbf38ff04f, type: 3}
+  - {fileID: 21300000, guid: fb81bfb0a2c514dd1a035dd26d70fa71, type: 3}
+  - {fileID: 21300000, guid: c5166077e6f694eaba2b4b245fad5c2d, type: 3}
+  deathEffect: {fileID: 8300000, guid: 79dd462585bec4e0c8603684257c1323, type: 3}
+  winEffect: {fileID: 8300000, guid: d9afb734ecfc34d56b8ddc23dcfe77fc, type: 3}
+  levelText: {fileID: 0}
+  winText: {fileID: 0}
+  loseText: {fileID: 0}
+  switchesLeftText: {fileID: 0}
+--- !u!114 &114741480780872672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563454021408342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c7b8a2873804c59b4941689ac2ecdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
